@@ -25,9 +25,48 @@
     <p>
         Alle möglichen HTTP Error Code können einfach wie folgt generiert werden:
     </p>
+
     <p>
         <b>http://www.heaas.ch/errors/code/{HTTP_CODE}</b>
     </p>
+
+    <p>Beispiele:</p>
+
+    <div class="row">
+        <div class="col-md-3">404 Not found</div>
+        <div class="col-md-9"><a href="http://www.heaas.ch/errors/code/404">http://www.heaas.ch/errors/code/404</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">410 Gone</div>
+        <div class="col-md-9"><a href="http://www.heaas.ch/errors/code/410">http://www.heaas.ch/errors/code/410</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">501 Not Implemented</div>
+        <div class="col-md-9"><a href="http://www.heaas.ch/errors/code/501">http://www.heaas.ch/errors/code/501</a>
+        </div>
+    </div>
+    <h2>Request Timeout</h2>
+
+    <p>Mit dieser Schnittstelle kann man überprüfen, wie der Client reagiert, wenn der Server lange nicht reagiert. Per
+        URL-Parameter kann man die Länge des Timeouts in Millisekunden sowie der resultierende HTTP-Code angeben.</p>
+    <p>
+        <b>http://www.heaas.ch/errors/timeout/{timeout}/{httpcode}</b>
+    </p>
+    <p>Bespiele:</p>
+    <div class="row">
+        <div class="col-md-4"><a href="http://www.heaas.ch/errors/timeout">http://www.heaas.ch/errors/timeout</a></div>
+        <div class="col-md-8">Aufruf mit den Defaultwerten: 5 Minuten Timeout und anschliessend ein HTTP 408, Request Timeout</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"><a href="http://www.heaas.ch/errors/timeout/5000">http://www.heaas.ch/errors/timeout/5000</a></div>
+        <div class="col-md-8">Timeout von 5 Sekunden</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"><a href="http://www.heaas.ch/errors/timeout/5000/200">http://www.heaas.ch/errors/timeout/5000/200</a></div>
+        <div class="col-md-8">Timeout von 5 Sekunden und mit der Antwort HTTP 200, OK</div>
+    </div>
 </div>
 </body>
 </html>
