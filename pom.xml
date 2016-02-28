@@ -10,6 +10,23 @@
 
 	<name>heaas-server</name>
 	<description>HTTP Errors as a Service</description>
+	<url>http://www.heaas.ch</url>
+
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Stefan Urech</name>
+			<email>stefan@surech.ch</email>
+			<organization>surech.ch</organization>
+			<url>http://www.surech.ch</url>
+		</developer>
+	</developers>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -22,6 +39,24 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 	</properties>
+
+	<scm>
+		<connection>scm:git:ssh://github.com:surech/heaas.git</connection>
+		<developerConnection>scm:git:ssh://github.com:surech/heaas.git</developerConnection>
+		<url>scm:git:ssh://github.com:surech/heaas.git</url>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>hosted.heaas.releases</id>
+			<url>http://repo.surech.ch/content/repositories/hosted.heaas.releases</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>hosted.heaas.snapshots</id>
+			<url>http://repo.surech.ch/content/repositories/hosted.heaas.snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
