@@ -14,11 +14,11 @@ import javax.ws.rs.ApplicationPath;
 @ApplicationPath("/errors")
 public class RestConfiguration extends ResourceConfig {
     public RestConfiguration() {
-        System.out.println("Constructing RestConfiguration");
         registerEndpoints();
     }
 
     public void registerEndpoints() {
         register(CodeResource.class);
+        register(TimeoutResource.class);
     }
 }
